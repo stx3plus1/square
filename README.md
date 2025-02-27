@@ -7,4 +7,10 @@ soon to be packed with features nobody asked for, but im struggling with python 
 
 # running
 
-copy .env.example to .env, etc etc etc you get the point, set the values and python3 main.py :thumbsup:
+copy .env.example to .env, etc etc etc you get the point
+
+set the values in .env to your bot or smth
+
+create sniplog.json (with contents as simply "{}", it will be automatically formatted) and snips directory (i cant be bothered to automate these diy)
+
+python3 main.py :thumbsup:
