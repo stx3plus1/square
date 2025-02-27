@@ -35,11 +35,10 @@ async def on_ready():
 # Sync
 
 async def sync(user_id: int):
-	if user_id == 1156118445310615573:
-		cmds = await client.tree.sync(guild=discord.Object(id=guild_id))
-		return f"Synced {len(cmds)} commands."
-	else:
+	if not user_id == 1156118445310615573:
 		return "Invalid permission."
+	cmds = await client.tree.sync(guild=discord.Object(id=guild_id))
+	return f"Synced {len(cmds)} commands."	
 @client.command(name="sync", description="Sync commands to guild.")
 async def sync_prefixed(ctx):
 	await ctx.send(await sync(ctx.author.id), delete_after=8)
@@ -64,6 +63,9 @@ async def ping_interaction(interaction):
 
 @client.tree.command(name="say", description="Bot say beep boop", guild=discord.Object(id=guild_id))
 async def say(interaction, text: str, reply: str = None):
+	if not user_id == 1156118445310615573:
+		await interaction.response.send_message("Nope.", ephemeral=True)
+		return
 	if reply == None:
 		await interaction.channel.send(text)
 		await interaction.response.send_message("Sent!", ephemeral=True)
