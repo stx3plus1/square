@@ -137,7 +137,7 @@ async def xp(member: discord.Member):
 	rem_xp = ((level + 1) * 100) - (cur_xp + 100)
 	embed = discord.Embed(title="Level", description=f"**Level {level}** @ `{cur_xp} XP`")
 	embed.set_author(name=f"{member.name}", icon_url=f"{member.avatar.url}")
-	embed.set_footer(text=f"{rem_xp} to level {level + 1}.")
+	embed.set_footer(text=f"{rem_xp} XP left to level {level + 1}.")
 	return embed
 @client.command(name="xp", description="View your current XP and level.")
 async def xp_prefixed(ctx):
