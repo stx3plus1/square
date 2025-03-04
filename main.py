@@ -9,7 +9,7 @@ from discord.ext import commands
 load_dotenv()
 
 token = os.getenv("DISCORD_TOKEN")
-bot_owner_id = os.getenv("BOT_OWNER_ID")
+bot_owner_id = int(os.getenv("BOT_OWNER_ID"))
 guild_id = int(os.getenv("BOT_GUILD_ID"))
 log_channel_id = int(os.getenv("MOD_LOG_CHANNEL"))
 
