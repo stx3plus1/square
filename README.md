@@ -1,16 +1,12 @@
 # square
-stupid little bot for my discord server because fuck other bots
+Stupid little bot for my Discord server, because fuck your "AI integrated bot" with "Premium features".
 
-warning this is the DEV version of my bot, not the stable version that is always running
+This is the developer version - sometimes has minor oopsies in it!
 
-soon to be packed with features nobody asked for, but im struggling with python atm so im just adding what i can by reading the cryptic ass docs alr
+Soon to be packed with features, or something... in a single damn file at the moment. Split feature cogs soon?
 
 # running
 
-copy .env.example to .env, etc etc etc you get the point
+Copy `.env.example` to `.env`, and set the values outlined inside it.
 
-set the values in .env to your bot or smth
-
-create sniplog.json (with contents as simply "{}", it will be automatically formatted) and snips directory (i cant be bothered to automate these diy)
-
-python3 main.py :thumbsup:
+Run `main.py` with `python3` MAKING SURE YOU ARE IN THE DIRECTORY FOR THE SHELL, else it can't find `snips/` or `main.json`, and shit goes downhill QUICK when it can't even access the filesystem.
